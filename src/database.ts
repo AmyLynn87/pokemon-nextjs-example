@@ -5,8 +5,6 @@ import { ExistingPokemon } from "./models/pokemon";
 //Local
 
 export async function connectToDB() {
-  // const client = await MongoClient.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@exmpleproject.uhpceew.mongodb.net/?retryWrites=true&w=majority`)
-
   const client = await MongoClient.connect(`${process.env.MONGO_URI}`)
   return client;
 }
